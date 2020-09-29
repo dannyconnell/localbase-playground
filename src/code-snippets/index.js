@@ -42,6 +42,24 @@ db.collection('users')
     age: 27
   })`
       },
+      {
+        id: 30,
+        title: 'Set Collection',
+        code: 
+`db.collection('users')
+  .set([
+    {
+      id: 1,
+      name: 'Bill',
+      age: 48
+    },
+    {
+      id: 2, 
+      name: 'Paul',
+      age: 28
+    }
+  ])`
+      }
     ]
   },
   {
@@ -185,6 +203,26 @@ db.collection('users')
     name: 'Pauline',
     age: 27
   })`
+      },
+      {
+        id: 31,
+        title: 'Set Collection including Keys',
+        code: 
+`db.collection('users')
+  .set([
+    {
+      id: 1,
+      name: 'Bill',
+      age: 48,
+      _key: 'mykey-1'
+    },
+    {
+      id: 2, 
+      name: 'Paul',
+      age: 28,
+      _key: 'mykey-2'
+    }
+  ], { keys: true })`
       },
       {
         id: 16,
